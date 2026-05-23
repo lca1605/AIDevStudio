@@ -1,0 +1,9 @@
+{
+  "name": "ai-appbuilder",
+  "private": true,
+  "packageManager": "pnpm@10.12.4",
+  "scripts": {
+    "dev": "pnpm --filter electron-shell dev",
+    "build": "pnpm --filter electron-shell build"
+  }
+}

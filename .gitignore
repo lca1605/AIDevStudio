@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+build/
+out/
+release/
+
+# logs
+*.log
+
+# env
+.env
+.env.*
+
+# editor
+.vscode/
+.idea/
+
+# cache
+.cache/
+.parcel-cache/
+
+# electron
+*.asar
+
+# system
+.DS_Store
+Thumbs.db
