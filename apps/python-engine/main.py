@@ -3,6 +3,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from openai import AsyncOpenAI
+from fastapi import FastAPI, HTTPException, Header
+from .workspace import WorkspaceManager
 # Import định nghĩa kiểu dữ liệu chuẩn cho mảng hội thoại của OpenAI
 from openai.types.chat import ChatCompletionMessageParam
 
@@ -81,7 +83,29 @@ async def handle_chat(request: ChatRequest):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+class WriteFileRequest(BaseModel):
+    workspace_path: str
+    file_path: str
+    content: str
 
+@app.get("/api/workspace/tree")
+async def get_workspace_tree(x_workspace_root: str = Header(...)):
+    """API lấy cấu trúc cây thư mục của dự án đang mở."""
+    try:
+        manager = WorkspaceManager(x_workspace_root)
+        return {"status": "success", "tree": manager.get_project_tree()}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/workspace/write")
+async def write_workspace_file(request: WriteFileRequest):
+    """API ghi mã nguồn do AI sinh ra xuống đĩa cứng cục bộ."""
+    try:
+        manager = WorkspaceManager(request.workspace_path)
+        success = manager.write_file_content(request.file_path, request.content)
+        return {"status": "success", "saved": success}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
