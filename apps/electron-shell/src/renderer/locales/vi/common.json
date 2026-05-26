@@ -1,0 +1,71 @@
+{
+  "app": {
+    "name": "AI AppBuilder"
+  },
+  "sidebar": {
+    "files": "Tệp tin",
+    "search": "Tìm kiếm",
+    "chat": "Chat với AI"
+  },
+  "editor": {
+    "noFile": "Chưa mở tệp nào",
+    "noFileHint": "Mở tệp từ thanh khám phá tệp",
+    "untitled": "Chưa đặt tên"
+  },
+  "terminal": {
+    "title": "Terminal",
+    "clear": "Xóa",
+    "new": "Terminal mới"
+  },
+  "preview": {
+    "title": "Xem trước",
+    "refresh": "Tải lại",
+    "openBrowser": "Mở trong trình duyệt"
+  },
+  "fileExplorer": {
+    "title": "Khám phá",
+    "openFolder": "Mở thư mục",
+    "newFile": "Tệp mới",
+    "newFolder": "Thư mục mới",
+    "noFolder": "Chưa mở thư mục nào",
+    "noFolderHint": "Mở thư mục để bắt đầu làm việc"
+  },
+  "chat": {
+    "placeholder": "Hỏi AI để xây dựng ứng dụng...",
+    "send": "Gửi",
+    "clear": "Xóa hội thoại",
+    "thinking": "AI đang xử lý..."
+  },
+  "statusBar": {
+    "ready": "Sẵn sàng",
+    "errors": "{{count}} lỗi",
+    "errors_other": "{{count}} lỗi",
+    "warnings": "{{count}} cảnh báo",
+    "warnings_other": "{{count}} cảnh báo"
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "theme": "Giao diện",
+    "language": "Ngôn ngữ",
+    "dark": "Tối",
+    "light": "Sáng",
+    "english": "Tiếng Anh",
+    "vietnamese": "Tiếng Việt"
+  },
+  "actions": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "open": "Mở",
+    "close": "Đóng",
+    "newProject": "Dự án mới",
+    "openProject": "Mở dự án"
+  },
+  "welcome": {
+    "title": "Chào mừng đến AI AppBuilder",
+    "subtitle": "Xây dựng ứng dụng với sức mạnh của AI",
+    "newProject": "Dự án mới",
+    "openProject": "Mở dự án",
+    "recentProjects": "Dự án gần đây",
+    "noRecent": "Không có dự án gần đây"
+  }
+}

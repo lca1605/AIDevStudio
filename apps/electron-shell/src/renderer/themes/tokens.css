@@ -1,0 +1,13 @@
+/* Design token CSS variables shared across themes */
+:root {
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --sidebar-width: 240px;
+  --activity-bar-width: 48px;
+  --panel-height: 200px;
+  --statusbar-height: 24px;
+  --titlebar-height: 36px;
+  --tab-height: 36px;
+}

@@ -1,17 +1,15 @@
+import { useEffect } from "react";
+import { IDELayout } from "../pages/ide/IDELayout";
+import { useThemeStore } from "../stores/theme.store";
+import "../styles/globals.css";
+import "../locales/i18n";
+
 export default function App() {
-  return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "#0f172a",
-        color: "white",
-        fontSize: "24px",
-      }}
-    >
-      AI AppBuilder
-    </div>
-  );
+  const theme = useThemeStore((s) => s.theme);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  return <IDELayout />;
 }

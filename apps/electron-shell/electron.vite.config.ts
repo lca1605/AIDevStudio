@@ -1,5 +1,6 @@
 import { defineConfig } from "electron-vite";
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";
 
 export default defineConfig({
@@ -7,10 +8,7 @@ export default defineConfig({
     build: {
       outDir: "dist/main",
       rollupOptions: {
-        input: path.resolve(
-          __dirname,
-          "src/main/index.ts"
-        ),
+        input: path.resolve(__dirname, "src/main/index.ts"),
       },
     },
   },
@@ -19,19 +17,13 @@ export default defineConfig({
     build: {
       outDir: "dist/preload",
       rollupOptions: {
-        input: path.resolve(
-          __dirname,
-          "src/preload/preload.ts"
-        ),
+        input: path.resolve(__dirname, "src/preload/preload.ts"),
       },
     },
   },
 
   renderer: {
-    root: path.resolve(
-      __dirname,
-      "src/renderer"
-    ),
-    plugins: [react()],
+    root: path.resolve(__dirname, "src/renderer"),
+    plugins: [tailwindcss(), react()],
   },
 });

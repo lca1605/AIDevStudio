@@ -1,0 +1,71 @@
+{
+  "app": {
+    "name": "AI AppBuilder"
+  },
+  "sidebar": {
+    "files": "Files",
+    "search": "Search",
+    "chat": "AI Chat"
+  },
+  "editor": {
+    "noFile": "No file open",
+    "noFileHint": "Open a file from the file explorer",
+    "untitled": "Untitled"
+  },
+  "terminal": {
+    "title": "Terminal",
+    "clear": "Clear",
+    "new": "New Terminal"
+  },
+  "preview": {
+    "title": "Preview",
+    "refresh": "Refresh",
+    "openBrowser": "Open in browser"
+  },
+  "fileExplorer": {
+    "title": "Explorer",
+    "openFolder": "Open Folder",
+    "newFile": "New File",
+    "newFolder": "New Folder",
+    "noFolder": "No folder opened",
+    "noFolderHint": "Open a folder to start working"
+  },
+  "chat": {
+    "placeholder": "Ask AI to build something...",
+    "send": "Send",
+    "clear": "Clear chat",
+    "thinking": "AI is thinking..."
+  },
+  "statusBar": {
+    "ready": "Ready",
+    "errors": "{{count}} error",
+    "errors_other": "{{count}} errors",
+    "warnings": "{{count}} warning",
+    "warnings_other": "{{count}} warnings"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": "Theme",
+    "language": "Language",
+    "dark": "Dark",
+    "light": "Light",
+    "english": "English",
+    "vietnamese": "Vietnamese"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "open": "Open",
+    "close": "Close",
+    "newProject": "New Project",
+    "openProject": "Open Project"
+  },
+  "welcome": {
+    "title": "Welcome to AI AppBuilder",
+    "subtitle": "Build applications with the power of AI",
+    "newProject": "New Project",
+    "openProject": "Open Project",
+    "recentProjects": "Recent Projects",
+    "noRecent": "No recent projects"
+  }
+}
